@@ -8,6 +8,8 @@ services:
     expose:
       - "9000"
     container_name: php_server
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     volumes:
       - ./src:/var/www/html
     environment:
